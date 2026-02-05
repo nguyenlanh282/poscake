@@ -8,14 +8,15 @@ Bộ Claude Code Skills cho hệ thống Point of Sale (POS).
 |---|-------|-------|------|
 | 1 | **poscake** | Build POS system với Next.js + React + TypeScript | Development |
 | 2 | **pos-payments** | Tích hợp thanh toán: Cash, QR, VNPay, Momo, Stripe | Development |
-| 3 | **pos-products** | CRUD sản phẩm, variations, tags, combo | API Integration |
-| 4 | **pos-orders** | Quản lý đơn hàng, tracking, tags | API Integration |
-| 5 | **pos-customers** | Quản lý khách hàng, điểm thưởng, level | API Integration |
-| 6 | **pos-inventory** | Lịch sử tồn kho, báo cáo tồn | API Integration |
-| 7 | **pos-warehouses** | Danh mục kho | API Integration |
-| 8 | **pos-stocktake** | Kiểm kê hàng hóa | API Integration |
-| 9 | **pos-geo** | Tra cứu tỉnh/huyện/xã | API Integration |
-| 10 | **pos-webhooks** | Template webhook integration | API Integration |
+| 3 | **pos-reports** | Analytics dashboards, báo cáo doanh thu, RFM, export | Development |
+| 4 | **pos-products** | CRUD sản phẩm, variations, tags, combo | API Integration |
+| 5 | **pos-orders** | Quản lý đơn hàng, tracking, tags | API Integration |
+| 6 | **pos-customers** | Quản lý khách hàng, điểm thưởng, level | API Integration |
+| 7 | **pos-inventory** | Lịch sử tồn kho, báo cáo tồn | API Integration |
+| 8 | **pos-warehouses** | Danh mục kho | API Integration |
+| 9 | **pos-stocktake** | Kiểm kê hàng hóa | API Integration |
+| 10 | **pos-geo** | Tra cứu tỉnh/huyện/xã | API Integration |
+| 11 | **pos-webhooks** | Template webhook integration | API Integration |
 
 ---
 
@@ -151,6 +152,15 @@ poscake/
 │   │       ├── e-wallets.md      # VNPay, Momo, ZaloPay
 │   │       └── card.md           # Stripe, PayOS
 │   │
+│   ├── pos-reports/              # [SKILL] Reports & Analytics
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── revenue.md        # Revenue reports
+│   │       ├── products.md       # Product analytics
+│   │       ├── customers.md      # Customer analytics, RFM
+│   │       ├── inventory.md      # Inventory reports
+│   │       └── export.md         # Excel, PDF, CSV export
+│   │
 │   ├── pos-products/             # [SKILL] Product API
 │   ├── pos-orders/               # [SKILL] Order API
 │   ├── pos-customers/            # [SKILL] Customer API
@@ -202,7 +212,19 @@ Tích hợp các phương thức thanh toán:
 | Card | Stripe | Payment Intent, Elements |
 | Card | PayOS | Thẻ nội địa Napas |
 
-### 3-10. API Integration Skills
+### 3. pos-reports (Development)
+
+Build analytics dashboards và báo cáo:
+
+| Report Type | Features |
+|-------------|----------|
+| Revenue | Daily/weekly/monthly, period comparison, payment breakdown |
+| Products | Top sellers, category performance, margin analysis, slow movers |
+| Customers | New vs returning, RFM segmentation, retention cohorts, LTV |
+| Inventory | Stock levels, turnover rate, dead stock, reorder suggestions |
+| Export | Excel (xlsx), PDF (jspdf), CSV, scheduled reports |
+
+### 4-11. API Integration Skills
 
 Tích hợp với Pancake POS API (`pos.pages.fm/api/v1`):
 
