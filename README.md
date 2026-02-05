@@ -9,14 +9,15 @@ Bộ Claude Code Skills cho hệ thống Point of Sale (POS).
 | 1 | **poscake** | Build POS system với Next.js + React + TypeScript | Development |
 | 2 | **pos-payments** | Tích hợp thanh toán: Cash, QR, VNPay, Momo, Stripe | Development |
 | 3 | **pos-reports** | Analytics dashboards, báo cáo doanh thu, RFM, export | Development |
-| 4 | **pos-products** | CRUD sản phẩm, variations, tags, combo | API Integration |
-| 5 | **pos-orders** | Quản lý đơn hàng, tracking, tags | API Integration |
-| 6 | **pos-customers** | Quản lý khách hàng, điểm thưởng, level | API Integration |
-| 7 | **pos-inventory** | Lịch sử tồn kho, báo cáo tồn | API Integration |
-| 8 | **pos-warehouses** | Danh mục kho | API Integration |
-| 9 | **pos-stocktake** | Kiểm kê hàng hóa | API Integration |
-| 10 | **pos-geo** | Tra cứu tỉnh/huyện/xã | API Integration |
-| 11 | **pos-webhooks** | Template webhook integration | API Integration |
+| 4 | **pos-auth** | Authentication: Email, OAuth, 2FA, Passkeys, RBAC | Development |
+| 5 | **pos-products** | CRUD sản phẩm, variations, tags, combo | API Integration |
+| 6 | **pos-orders** | Quản lý đơn hàng, tracking, tags | API Integration |
+| 7 | **pos-customers** | Quản lý khách hàng, điểm thưởng, level | API Integration |
+| 8 | **pos-inventory** | Lịch sử tồn kho, báo cáo tồn | API Integration |
+| 9 | **pos-warehouses** | Danh mục kho | API Integration |
+| 10 | **pos-stocktake** | Kiểm kê hàng hóa | API Integration |
+| 11 | **pos-geo** | Tra cứu tỉnh/huyện/xã | API Integration |
+| 12 | **pos-webhooks** | Template webhook integration | API Integration |
 
 ---
 
@@ -161,6 +162,15 @@ poscake/
 │   │       ├── inventory.md      # Inventory reports
 │   │       └── export.md         # Excel, PDF, CSV export
 │   │
+│   ├── pos-auth/                 # [SKILL] Authentication
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── email-password.md # Email/password auth
+│   │       ├── oauth.md          # Google, GitHub, Facebook
+│   │       ├── 2fa.md            # TOTP, SMS OTP
+│   │       ├── passkeys.md       # WebAuthn, biometric
+│   │       └── session-rbac.md   # Session, roles, permissions
+│   │
 │   ├── pos-products/             # [SKILL] Product API
 │   ├── pos-orders/               # [SKILL] Order API
 │   ├── pos-customers/            # [SKILL] Customer API
@@ -224,7 +234,19 @@ Build analytics dashboards và báo cáo:
 | Inventory | Stock levels, turnover rate, dead stock, reorder suggestions |
 | Export | Excel (xlsx), PDF (jspdf), CSV, scheduled reports |
 
-### 4-11. API Integration Skills
+### 4. pos-auth (Development)
+
+Authentication với Better Auth framework:
+
+| Method | Features |
+|--------|----------|
+| Email/Password | Register, login, verification, password reset |
+| OAuth | Google, GitHub, Facebook, Discord |
+| 2FA/MFA | TOTP (Google Authenticator), SMS OTP, backup codes |
+| Passkeys | WebAuthn, fingerprint, Face ID |
+| Session/RBAC | Session management, roles, permissions, rate limiting |
+
+### 5-12. API Integration Skills
 
 Tích hợp với Pancake POS API (`pos.pages.fm/api/v1`):
 
